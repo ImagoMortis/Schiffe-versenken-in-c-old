@@ -54,7 +54,7 @@ int arr4[ROWS][COLS]={        //Spielfeld von Spieler 2 das Spieler1 sieht
         {0,0,0,0,0,0,0,0,0,0},//I
         {0,0,0,0,0,0,0,0,0,0}}; //J
 
-char *KoordinatenEingabeS1(int KoordinatenS1[], char *ptrAusrichtungS1){
+int *KoordinatenEingabeS1(int KoordinatenS1[], char *ptrAusrichtungS1){
     //char KoordinatenEinlesenS1[39];
 
     char KoordinatenS1_1[10];
@@ -75,7 +75,7 @@ char *KoordinatenEingabeS1(int KoordinatenS1[], char *ptrAusrichtungS1){
     printf("Schlachtschiff: %d\n", KoordinatenS1[0]);
     printf("Schlachtschiff:%d\n", KoordinatenS1[1]);
     fflush(stdin);
-/*
+
     //Kreuzer1
     printf("Bitte geben Sie die Kreuzer Y-Koordinate ein\n");
     scanf("%c", &KoordinatenS1_1[1]);
@@ -194,7 +194,7 @@ char *KoordinatenEingabeS1(int KoordinatenS1[], char *ptrAusrichtungS1){
     printf("U-Boot:%d\n", KoordinatenS1[19]);
     fflush(stdin);
 
-    */
+
 
 
 
@@ -412,9 +412,9 @@ if(board[Koordinaten[1]+i][Koordinaten[0]] == 120){
 //Überprüfung des Zählers
 if(SchlachtschiffZaehler == 4){
     printf("Schiff versenkt");
-    for (int i = 0; i < Groesse[0]; ++i) {
+    for (int j = 0; j < Groesse[0]; ++i) {
 
-        board[Koordinaten[1]+i][Koordinaten[0]] = 88;
+        board[Koordinaten[1]+j][Koordinaten[0]] = 88;
     }
 }
         }
@@ -428,9 +428,9 @@ if(SchlachtschiffZaehler == 4){
             if (SchlachtschiffZaehler == 4) {
                 printf("Schiff versenkt");
 
-                for (int i = 0; i < Groesse[0]; ++i) {
+                for (int j = 0; j < Groesse[0]; ++j) {
 
-                    board[Koordinaten[1]][Koordinaten[0] + i] = 88;
+                    board[Koordinaten[1]][Koordinaten[0] + j] = 88;
                 }
 
             }
@@ -457,7 +457,7 @@ int main() {
     AusrichtungS1[7]='W';
     AusrichtungS1[8]='W';
     AusrichtungS1[9]='W';
-        //Koordinaten Spieler 2
+       /* //Koordinaten Spieler 2
         int KoordinatenS2[100];
         // char KoordinatenEinlesenS2[100];
         char AusrichtungS2[10];
@@ -465,7 +465,7 @@ int main() {
 //Variablen für die Kontrollfunktionen--------
         int Kontrollwert1=1;
         int Kontrollwert2=1;
-
+*/
 
 
 
