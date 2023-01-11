@@ -234,6 +234,8 @@ void Spielfeldausgabe(int board[ROWS][COLS]) {
                 printf("- ");
             else if(board[j][i] == 120)
                 printf("x ");
+            else if(board[j][i] == 88)
+                printf("X ");
     }
         printf("\n");
     }
@@ -399,11 +401,12 @@ void schiessen(int board[ROWS][COLS]){
 }
 
 
-void Kontrolle(int Koordinaten[], char Ausrichtung[], int board[ROWS][COLS], int Groesse[]){
+void Kontrolle(int Koordinaten[], char Ausrichtung[], int board[ROWS][COLS], int Groesse[])
+{
 
-//Schlachtschiff
-int SchlachtschiffZaehler = 0;
-//Schleife für Zähler
+    //Schlachtschiff
+    int SchlachtschiffZaehler = 0;
+    //Schleife für Zähler
     if(Ausrichtung[0] == 'W'){
         for (int i = 0; i < Groesse[0]; ++i) {
 if(board[Koordinaten[1]+i][Koordinaten[0]] == 120){
@@ -411,8 +414,8 @@ if(board[Koordinaten[1]+i][Koordinaten[0]] == 120){
 }
 //Überprüfung des Zählers
 if(SchlachtschiffZaehler == 4){
-    printf("Schiff versenkt");
-    for (int j = 0; j < Groesse[0]; ++i) {
+    printf("Schiff versenkt\n");
+    for (int j = 0; j < Groesse[0]; ++j) {
 
         board[Koordinaten[1]+j][Koordinaten[0]] = 88;
     }
@@ -426,20 +429,200 @@ if(SchlachtschiffZaehler == 4){
             }
             //Überprüfung des Zählers
             if (SchlachtschiffZaehler == 4) {
-                printf("Schiff versenkt");
+
 
                 for (int j = 0; j < Groesse[0]; ++j) {
 
                     board[Koordinaten[1]][Koordinaten[0] + j] = 88;
                 }
-
+                printf("Schiff versenkt");
             }
         }
 
+
+//-----------------------------------------------------------------------------------
+    //Kreuzer1
+    int Kreuzerzähler1 = 0;
+    //Schleife für Zähler
+    if(Ausrichtung[1] == 'W') {
+        for (int i = 0; i < Groesse[1]; ++i) {
+            if (board[Koordinaten[3] + i][Koordinaten[2]] == 120) {
+                Kreuzerzähler1++;
+            }
+//Überprüfung des Zählers
+            if (Kreuzerzähler1 == 3) {
+                for (int j = 0; j < Groesse[1]; j++) {
+
+                    board[Koordinaten[3] + i][Koordinaten[2]] = 88;
+
+                }
+                printf("Schiff versenkt\n");
+            }
+        }
+
+        } else if(Ausrichtung[1] == 'S') {
+        for (int i = 0; i < Groesse[1]; ++i) {
+            if (board[Koordinaten[3]][Koordinaten[2] + i] == 120) {
+                Kreuzerzähler1++;
+            }
+            //Überprüfung des Zählers
+            if (Kreuzerzähler1 == 3) {
+                for (int j = 0; j < Groesse[1]; j++) {
+
+                    board[Koordinaten[3]][Koordinaten[2] + i] = 88;
+
+                }
+                printf("Schiff versenkt\n");
+            }
+        }
     }
+//-----------------------------------------------------------------------------------
+        //Kreuzer2
+        int Kreuzerzähler2 = 0;
+        //Schleife für Zähler
+        if (Ausrichtung[2] == 'W') {
+            for (int i = 0; i < Groesse[1]; ++i) {
+                if (board[Koordinaten[5] + i][Koordinaten[4]] == 120) {
+                    Kreuzerzähler2++;
+                }
+//Überprüfung des Zählers
+                if (Kreuzerzähler2 == 3) {
+                    for (int j = 0; j < Groesse[1]; j++) {
+
+                        board[Koordinaten[5] + i][Koordinaten[4]] = 88;
+
+                    }
+                    printf("Schiff versenkt\n");
+                }
+            }
+        } else if (Ausrichtung[2] == 'S') {
+            for (int i = 0; i < Groesse[1]; ++i) {
+                if (board[Koordinaten[5]][Koordinaten[4] + i] == 120) {
+                    Kreuzerzähler2++;
+                }
+                //Überprüfung des Zählers
+                if (Kreuzerzähler2 == 3) {
+                    for (int j = 0; j < Groesse[1]; j++) {
+
+                        board[Koordinaten[5]][Koordinaten[4] + i] = 88;
+
+                    }
+                    printf("Schiff versenkt\n");
+                }
+            }
+        }
+//-----------------------------------------------------------------------------------
+
+            //Zerstörer
+            int zerstörerzähler1 = 0;
+            //Schleife für Zähler
+            if (Ausrichtung[3] == 'W') {
+                for (int i = 0; i < Groesse[2]; ++i) {
+                    if (board[Koordinaten[7] + i][Koordinaten[6]] == 120) {
+                        zerstörerzähler1++;
+                    }
+//Überprüfung des Zählers
+                    if (zerstörerzähler1 == 2) {
+                        for (int j = 0; j < Groesse[2]; j++) {
+
+                            board[Koordinaten[7] + i][Koordinaten[6]] = 88;
+
+                        }
+                        printf("Schiff versenkt\n");
+                    }
+                }
+            } else if (Ausrichtung[3] == 'S') {
+                for (int i = 0; i < Groesse[2]; ++i) {
+                    if (board[Koordinaten[7]][Koordinaten[6] + i] == 120) {
+                        zerstörerzähler1++;
+                    }
+                    //Überprüfung des Zählers
+                    if (zerstörerzähler1 == 2) {
+                        for (int j = 0; j < Groesse[2]; j++) {
+
+                            board[Koordinaten[7]][Koordinaten[6] + i] = 88;
+
+                        }
+                        printf("Schiff versenkt\n");
+                    }
+                }
+            }
+//-----------------------------------------------------------------------------------
+//Zerstörer2
+            int zerstörerzähler2 = 0;
+            //Schleife für Zähler
+            if (Ausrichtung[4] == 'W') {
+                for (int i = 0; i < Groesse[2]; ++i) {
+                    if (board[Koordinaten[9] + i][Koordinaten[8]] == 120) {
+                        zerstörerzähler2++;
+                    }
+//Überprüfung des Zählers
+                    if (zerstörerzähler2 == 2) {
+                        for (int j = 0; j < Groesse[2]; j++) {
+
+                            board[Koordinaten[9] + i][Koordinaten[8]] = 88;
+
+                        }
+                        printf("Schiff versenkt\n");
+                    }
+                }
+                } else if (Ausrichtung[4] == 'S') {
+                for (int i = 0; i < Groesse[2]; ++i) {
+                    if (board[Koordinaten[9]][Koordinaten[8] + i] == 120) {
+                        zerstörerzähler2++;
+                    }
+                    //Überprüfung des Zählers
+                    if (zerstörerzähler2 == 2) {
+                        for (int j = 0; j < Groesse[2]; j++) {
+
+                            board[Koordinaten[9]][Koordinaten[8] + i] = 88;
+
+                        }
+                        printf("Schiff versenkt\n");
+                    }
+                }
+            }
 
 
-}
+            //Zerstörer3
+            int zerstörerzähler3 = 0;
+            //Schleife für Zähler
+            if (Ausrichtung[5] == 'W') {
+                for (int i = 0; i < Groesse[2]; ++i) {
+                    if (board[Koordinaten[11] + i][Koordinaten[10]] == 120) {
+                        zerstörerzähler3++;
+                    }
+//Überprüfung des Zählers
+                    if (zerstörerzähler3 == 2) {
+                        for (int j = 0; j < Groesse[2]; j++) {
+
+                            board[Koordinaten[11] + i][Koordinaten[10]] = 88;
+
+                        }
+                        printf("Schiff versenkt\n");
+                    }
+                }
+            } else if (Ausrichtung[5] == 'S') {
+                for (int i = 0; i < Groesse[2]; ++i) {
+                    if (board[Koordinaten[11]][Koordinaten[10] + i] == 120) {
+                        zerstörerzähler3++;
+                    }
+                    //Überprüfung des Zählers
+                    if (zerstörerzähler3 == 2) {
+                        for (int j = 0; j < Groesse[2]; j++) {
+
+                            board[Koordinaten[11]][Koordinaten[10] + i] = 88;
+
+                        }
+                        printf("Schiff versenkt\n");
+                    }
+                }
+            }
+
+        }
+
+
+
 
 
 
@@ -473,11 +656,16 @@ int main() {
 
     KoordinatenEingabeS1(KoordinatenS1,ptrAusrichtungS1);
     Schiffesetzen(KoordinatenS1, AusrichtungS1, arr1,schiffgroessen);
+    Spielfeldausgabe(arr1);
+
     while(1 == 1){
 
+        schiessen(arr1);
     Spielfeldausgabe(arr1);
-    schiessen(arr1);
-    Spielfeldausgabe(arr1);
+    Kontrolle(KoordinatenS1,AusrichtungS1,arr1,schiffgroessen);
+
+        Spielfeldausgabe(arr1);
+
 }
 
 
