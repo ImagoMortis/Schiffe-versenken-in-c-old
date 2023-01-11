@@ -381,15 +381,15 @@ void schiessen(int board[ROWS][COLS]){
     scanf("%d", &x);
     fflush(stdin);
 
-    if(board[y][x] == 0){
+    if(board[x][y] == 0){
 
-        board[y][x] = 45;
-        board[y][x] = 45;
+        board[x][y] = 45;
+
         printf("Wasser getroffen");
-    }else if(board[y][x] != 0){
+    }else if(board[x][y] != 0){
 
-        board[y][x] = 120;
-        board[y][x] = 120;
+        board[x][y] = 120;
+
         printf("Schiff getroffen");
     }
 
@@ -472,10 +472,13 @@ int main() {
 
 
     KoordinatenEingabeS1(KoordinatenS1,ptrAusrichtungS1);
-
     Schiffesetzen(KoordinatenS1, AusrichtungS1, arr1,schiffgroessen);
-    Spielfeldausgabe(arr1);
+    while(1 == 1){
 
+    Spielfeldausgabe(arr1);
+    schiessen(arr1);
+    Spielfeldausgabe(arr1);
+}
 
 
 
