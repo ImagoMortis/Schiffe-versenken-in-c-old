@@ -57,7 +57,7 @@ int arr4[ROWS][COLS]={        //Spielfeld von Spieler 2 das Spieler1 sieht
         {0,0,0,0,0,0,0,0,0,0},//I
         {0,0,0,0,0,0,0,0,0,0}}; //J
 
-int *KoordinatenEingabeS1(int KoordinatenS1[], char *ptrAusrichtungS1){
+int *KoordinatenEingabeS1(int KoordinatenS1[], char *ptrAusrichtungS1,char AusrichtungS1[]){
     //char KoordinatenEinlesenS1[39];
 
     char KoordinatenS1_1[10];
@@ -197,15 +197,35 @@ int *KoordinatenEingabeS1(int KoordinatenS1[], char *ptrAusrichtungS1){
     printf("U-Boot:%d\n", KoordinatenS1[19]);
     fflush(stdin);
 
+    for (int i = 0; i < 20; ++i) {
+
+        if (KoordinatenS1[i] < 0 || KoordinatenS1[i] >= 10) {
+            printf("Falsche Koordinateneingabe, bitte neu Starten\n");
+            exit(EXIT_SUCCESS);
 
 
+        }
+
+        }
+    for (int i = 0; i < 10; ++i) {
+
+        if (AusrichtungS1[i] != 'W' && AusrichtungS1[i] != 'S') {
+            printf("Falsche Koordinateneingabe (Ausrichtung), bitte neu Starten\n");
+            exit(EXIT_SUCCESS);
+
+
+
+
+        }
+
+    }
 
 
     return KoordinatenS1;
 
 }
 
-int *KoordinatenEingabeS2(int KoordinatenS2[], char *ptrAusrichtungS2){
+int *KoordinatenEingabeS2(int KoordinatenS2[], char *ptrAusrichtungS2,char AusrichtungS2[]){
     //char KoordinatenEinlesenS1[39];
 
     char KoordinatenS1_1[10];
@@ -346,8 +366,26 @@ int *KoordinatenEingabeS2(int KoordinatenS2[], char *ptrAusrichtungS2){
     fflush(stdin);
 
 
+    for (int i = 0; i < 20; ++i) {
+
+        if (KoordinatenS2[i] < 0 || KoordinatenS2[i] >= 10) {
+            printf("Falsche Koordinateneingabe, bitte neu Starten\n");
+            exit(EXIT_SUCCESS);
 
 
+        }
+
+    }
+    for (int i = 0; i < 10; ++i) {
+
+        if (AusrichtungS2[i] != 'W' && AusrichtungS2[i] != 'S') {
+            printf("Falsche Koordinateneingabe (Ausrichtung), bitte neu Starten\n");
+            exit(EXIT_SUCCESS);
+
+
+        }
+
+    }
 
     return KoordinatenS2;
 
@@ -970,7 +1008,6 @@ printf(" Alle Schiffe zerstört");
 }
 
 
-
 int main() {
 
    //Arrays, Variable, etc--------------------------------------------------------------
@@ -1001,12 +1038,12 @@ int main() {
 
 
 
-    KoordinatenEingabeS1(KoordinatenS1,ptrAusrichtungS1);
+    KoordinatenEingabeS1(KoordinatenS1,ptrAusrichtungS1,AusrichtungS1);
     Schiffesetzen(KoordinatenS1, AusrichtungS1, arr1,schiffgroessen);
     Spielfeldeinleseausgabe(arr1);
     KonsoleLeeren();
 
-    KoordinatenEingabeS2(KoordinatenS2,ptrAusrichtungS2);
+    KoordinatenEingabeS2(KoordinatenS2,ptrAusrichtungS2,AusrichtungS2);
     Schiffesetzen(KoordinatenS2, AusrichtungS2, arr2,schiffgroessen);
     Spielfeldeinleseausgabe(arr2);
     KonsoleLeeren();
