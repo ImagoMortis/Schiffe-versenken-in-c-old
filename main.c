@@ -931,7 +931,7 @@ void KonsoleLeeren() {
     printf("1 eingeben um die Konsole zu leeren");
     scanf("%d", &input);
     if (input == 1) {
-        system("clear");
+        clrscr();
     }
 }
 
