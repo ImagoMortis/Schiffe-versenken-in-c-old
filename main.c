@@ -403,8 +403,9 @@ void schiessen(int board[ROWS][COLS]){
 }
 
 
-void Kontrolle(int Koordinaten[], char Ausrichtung[], int board[ROWS][COLS], int Groesse[])
+void Kontrolle(int Koordinaten[], char Ausrichtung[], int board[ROWS][COLS], int Groesse[], int pruefwert)
 {
+int Schiffstatus = 0 ;
 
     //Schlachtschiff
     int SchlachtschiffZaehler = 0;
@@ -420,7 +421,10 @@ if(SchlachtschiffZaehler == 4){
     for (int j = 0; j < Groesse[0]; ++j) {
 
         board[Koordinaten[1]+j][Koordinaten[0]] = 88;
+
+
     }
+    Schiffstatus++;
 }
         }
 
@@ -438,6 +442,7 @@ if(SchlachtschiffZaehler == 4){
                     board[Koordinaten[1]][Koordinaten[0] + j] = 88;
                 }
                 printf("Schiff versenkt");
+                Schiffstatus++;
             }
         }
     }
@@ -459,6 +464,7 @@ if(SchlachtschiffZaehler == 4){
 
                 }
                 printf("Schiff versenkt\n");
+                Schiffstatus++;
             }
         }
 
@@ -475,6 +481,7 @@ if(SchlachtschiffZaehler == 4){
 
                 }
                 printf("Schiff versenkt\n");
+                Schiffstatus++;
             }
         }
     }
@@ -495,6 +502,7 @@ if(SchlachtschiffZaehler == 4){
 
                     }
                     printf("Schiff versenkt\n");
+                    Schiffstatus++;
                 }
             }
         } else if (Ausrichtung[2] == 'S') {
@@ -510,6 +518,7 @@ if(SchlachtschiffZaehler == 4){
 
                     }
                     printf("Schiff versenkt\n");
+                    Schiffstatus++;
                 }
             }
         }
@@ -531,6 +540,7 @@ if(SchlachtschiffZaehler == 4){
 
                         }
                         printf("Schiff versenkt\n");
+                        Schiffstatus++;
                     }
                 }
             } else if (Ausrichtung[3] == 'S') {
@@ -546,6 +556,7 @@ if(SchlachtschiffZaehler == 4){
 
                         }
                         printf("Schiff versenkt\n");
+                        Schiffstatus++;
                     }
                 }
             }
@@ -566,6 +577,7 @@ if(SchlachtschiffZaehler == 4){
 
                         }
                         printf("Schiff versenkt\n");
+                        Schiffstatus++;
                     }
                 }
                 } else if (Ausrichtung[4] == 'S') {
@@ -581,6 +593,7 @@ if(SchlachtschiffZaehler == 4){
 
                         }
                         printf("Schiff versenkt\n");
+                        Schiffstatus++;
                     }
                 }
             }
@@ -602,6 +615,7 @@ if(SchlachtschiffZaehler == 4){
 
                         }
                         printf("Schiff versenkt\n");
+                        Schiffstatus++;
                     }
                 }
             } else if (Ausrichtung[5] == 'S') {
@@ -617,6 +631,7 @@ if(SchlachtschiffZaehler == 4){
 
                         }
                         printf("Schiff versenkt\n");
+                        Schiffstatus++;
                     }
                 }
             }
@@ -638,6 +653,7 @@ if(SchlachtschiffZaehler == 4){
 
                 }
                 printf("Schiff versenkt\n");
+                Schiffstatus++;
             }
         }
     }
@@ -658,6 +674,7 @@ if(SchlachtschiffZaehler == 4){
 
                 }
                 printf("Schiff versenkt\n");
+                Schiffstatus++;
             }
         }
     }
@@ -679,6 +696,7 @@ if(SchlachtschiffZaehler == 4){
 
                 }
                 printf("Schiff versenkt\n");
+                Schiffstatus++;
             }
         }
     }
@@ -700,13 +718,21 @@ if(SchlachtschiffZaehler == 4){
 
                 }
                 printf("Schiff versenkt\n");
+                Schiffstatus++;
             }
         }
     }
 
+if(Schiffstatus >= 10){
+
+    pruefwert = 0;
+
+}
 
 
-        }
+      }
+      /*
+
 void Gesamtkontrolle(int board[ROWS][COLS], int pruefwert){
 int zaheler = 0;
     for (int i = 0; i < ROWS; ++i) {
@@ -735,7 +761,7 @@ int zaheler = 0;
 
 }
 
-
+*/
 
 
 
@@ -774,10 +800,10 @@ int main() {
 
         schiessen(arr1);
     Spielfeldausgabe(arr1);
-    Kontrolle(KoordinatenS1,AusrichtungS1,arr1,schiffgroessen);
+    Kontrolle(KoordinatenS1,AusrichtungS1,arr1,schiffgroessen, Kontrollwert1);
 
         Spielfeldausgabe(arr1);
-        Gesamtkontrolle(arr1,Kontrollwert1);
+       // Gesamtkontrolle(arr1,Kontrollwert1);
 }
 
 
