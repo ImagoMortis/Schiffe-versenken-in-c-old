@@ -1,8 +1,8 @@
 #include <stdio.h>
 #define ROWS 10
 #define COLS 10
-int Kontrollwert1 ;
-int Kontrollwert2 ;
+int Kontrollwert1 = 1;
+int Kontrollwert2 = 1;
 //Schlachtschiff=0 | Kreuzer=1 | Zerstörer=2| Uboot=1
  int schiffgroessen[10] = {4,3,2,1};
 int arr1[ROWS][COLS]={        //Spielfeld von Spieler 1 das Spieler1 sieht
@@ -770,14 +770,14 @@ int main() {
     Schiffesetzen(KoordinatenS1, AusrichtungS1, arr1,schiffgroessen);
     Spielfeldausgabe(arr1);
 
-    while(1 == 1){
+    while(Kontrollwert1 == 1 && Kontrollwert2 == 1){
 
         schiessen(arr1);
     Spielfeldausgabe(arr1);
     Kontrolle(KoordinatenS1,AusrichtungS1,arr1,schiffgroessen);
 
         Spielfeldausgabe(arr1);
-
+        Gesamtkontrolle(arr1,Kontrollwert1);
 }
 
 
