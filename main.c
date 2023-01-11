@@ -205,8 +205,198 @@ int *KoordinatenEingabeS1(int KoordinatenS1[], char *ptrAusrichtungS1){
 
 }
 
+int *KoordinatenEingabeS2(int KoordinatenS2[], char *ptrAusrichtungS2){
+    //char KoordinatenEinlesenS1[39];
+
+    char KoordinatenS1_1[10];
+    int KoordinatenS1_2[10];
+    //  int KoordinatenS1[39];
+
+
+    //Schlachtschiff
+    printf("Bitte geben Sie die Schlachtschiff Y-Koordinate ein\n");
+    scanf("%c", &KoordinatenS1_1[0]);
+    KoordinatenS2[0] = (int)KoordinatenS1_1[0]-65;
+    printf("Bitte geben Sie die Schlachtschiff X-Koordinate ein\n");
+    scanf("%d", &KoordinatenS1_2[0]);
+    KoordinatenS2[1] = (int)KoordinatenS1_2[0];
+    fflush(stdin);
+    printf("Bitte geben Sie die Schlachtschiff Ausrichtung ein\n");
+    scanf("%c", &ptrAusrichtungS2[0]);
+    printf("Schlachtschiff: %d\n", KoordinatenS2[0]);
+    printf("Schlachtschiff:%d\n", KoordinatenS2[1]);
+    fflush(stdin);
+
+    //Kreuzer1
+    printf("Bitte geben Sie die Kreuzer Y-Koordinate ein\n");
+    scanf("%c", &KoordinatenS1_1[1]);
+    KoordinatenS2[2] = (int)KoordinatenS1_1[1]-65;
+    printf("Bitte geben Sie die Kreuzer X-Koordinate ein\n");
+    scanf("%d", &KoordinatenS1_2[1]);
+    KoordinatenS2[3] = (int)KoordinatenS1_2[1];
+    fflush(stdin);
+    printf("Bitte geben Sie die Kreuzer Ausrichtung ein\n");
+    scanf("%c", &ptrAusrichtungS2[1]);
+    printf("Kreuzer: %d\n", KoordinatenS2[2]);
+    printf("Kreuzer:%d\n", KoordinatenS2[3]);
+    fflush(stdin);
+
+//Kreuzer2
+    printf("Bitte geben Sie die Kreuzer Y-Koordinate ein\n");
+    scanf("%c", &KoordinatenS1_1[2]);
+    KoordinatenS2[4] = (int)KoordinatenS1_1[2]-65;
+    printf("Bitte geben Sie die Kreuzer X-Koordinate ein\n");
+    scanf("%d", &KoordinatenS1_2[2]);
+    KoordinatenS2[5] = (int)KoordinatenS1_2[2];
+    fflush(stdin);
+    printf("Bitte geben Sie die Kreuzer Ausrichtung ein\n");
+    scanf("%c", &ptrAusrichtungS2[2]);
+    printf("Kreuzer: %d\n", KoordinatenS2[4]);
+    printf("Kreuzer:%d\n", KoordinatenS2[5]);
+    fflush(stdin);
+
+//Zerstörer1
+    printf("Bitte geben Sie die Zerstoerer Y-Koordinate ein\n");
+    scanf("%c", &KoordinatenS1_1[3]);
+    KoordinatenS2[6] = (int)KoordinatenS1_1[3]-65;
+    printf("Bitte geben Sie die Zerstoerer X-Koordinate ein\n");
+    scanf("%d", &KoordinatenS1_2[3]);
+    KoordinatenS2[7] = (int)KoordinatenS1_2[3];
+    fflush(stdin);
+    printf("Bitte geben Sie die Zerstoerer Ausrichtung ein\n");
+    scanf("%c", &ptrAusrichtungS2[3]);
+    printf("Zerstoerer: %d\n", KoordinatenS2[6]);
+    printf("Zerstoerer:%d\n", KoordinatenS2[7]);
+    fflush(stdin);
+
+    //Zerstörer2
+    printf("Bitte geben Sie die Zerstoerer Y-Koordinate ein\n");
+    scanf("%c", &KoordinatenS1_1[4]);
+    KoordinatenS2[8] = (int)KoordinatenS1_1[4]-65;
+    printf("Bitte geben Sie die Zerstoerer X-Koordinate ein\n");
+    scanf("%d", &KoordinatenS1_2[4]);
+    KoordinatenS2[9] = (int)KoordinatenS1_2[4];
+    fflush(stdin);
+    printf("Bitte geben Sie die Zerstoerer Ausrichtung ein\n");
+    scanf("%c", &ptrAusrichtungS2[4]);
+    printf("Zerstoerer: %d\n", KoordinatenS2[8]);
+    printf("Zerstoerer:%d\n", KoordinatenS2[9]);
+    fflush(stdin);
+
+//Zerstörer3
+    printf("Bitte geben Sie die Zerstoerer Y-Koordinate ein\n");
+    scanf("%c", &KoordinatenS1_1[5]);
+    KoordinatenS2[10] = (int)KoordinatenS1_1[5]-65;
+    printf("Bitte geben Sie die Zerstoerer X-Koordinate ein\n");
+    scanf("%d", &KoordinatenS1_2[5]);
+    KoordinatenS2[11] = (int)KoordinatenS1_2[5];
+    fflush(stdin);
+    printf("Bitte geben Sie die Zerstoerer Ausrichtung ein\n");
+    scanf("%c", &ptrAusrichtungS2[5]);
+    printf("Zerstoerer: %d\n", KoordinatenS2[10]);
+    printf("Zerstoerer:%d\n", KoordinatenS2[11]);
+    fflush(stdin);
+
+//UBoot1
+    printf("Bitte geben Sie die U-Boot Y-Koordinate ein\n");
+    scanf("%c", &KoordinatenS1_1[6]);
+    KoordinatenS2[12] = (int)KoordinatenS1_1[6]-65;
+    printf("Bitte geben Sie die U-Boot X-Koordinate ein\n");
+    scanf("%d", &KoordinatenS1_2[6]);
+    KoordinatenS2[13] = (int)KoordinatenS1_2[6];
+    fflush(stdin);
+    printf("U-Boot: %d\n", KoordinatenS2[12]);
+    printf("U-Boot:%d\n", KoordinatenS2[13]);
+    fflush(stdin);
+
+//UBoot2
+    printf("Bitte geben Sie die U-Boot Y-Koordinate ein\n");
+    scanf("%c", &KoordinatenS1_1[7]);
+    KoordinatenS2[14] = (int)KoordinatenS1_1[7]-65;
+    printf("Bitte geben Sie die U-Boot X-Koordinate ein\n");
+    scanf("%d", &KoordinatenS1_2[7]);
+    KoordinatenS2[15] = (int)KoordinatenS1_2[7];
+    fflush(stdin);
+    printf("U-Boot: %d\n", KoordinatenS2[14]);
+    printf("U-Boot:%d\n", KoordinatenS2[15]);
+    fflush(stdin);
+
+    //UBoot3
+    printf("Bitte geben Sie die U-Boot Y-Koordinate ein\n");
+    scanf("%c", &KoordinatenS1_1[8]);
+    KoordinatenS2[16] = (int)KoordinatenS1_1[8]-65;
+    printf("Bitte geben Sie die U-Boot X-Koordinate ein\n");
+    scanf("%d", &KoordinatenS1_2[8]);
+    KoordinatenS2[17] = (int)KoordinatenS1_2[8];
+    fflush(stdin);
+    printf("U-Boot: %d\n", KoordinatenS2[16]);
+    printf("U-Boot:%d\n", KoordinatenS2[17]);
+    fflush(stdin);
+
+    //UBoot4
+    printf("Bitte geben Sie die U-Boot Y-Koordinate ein\n");
+    scanf("%c", &KoordinatenS1_1[9]);
+    KoordinatenS2[18] = (int)KoordinatenS1_1[9]-65;
+    printf("Bitte geben Sie die U-Boot X-Koordinate ein\n");
+    scanf("%d", &KoordinatenS1_2[9]);
+    KoordinatenS2[19] = (int)KoordinatenS1_2[9];
+    fflush(stdin);
+    printf("U-Boot: %d\n", KoordinatenS2[18]);
+    printf("U-Boot:%d\n", KoordinatenS2[19]);
+    fflush(stdin);
+
+
+
+
+
+    return KoordinatenS2;
+
+}
+
+
+
+
 //Spielfeldausgabefunktion
 void Spielfeldausgabe(int board[ROWS][COLS]) {
+    printf(" 0 1 2 3 4 5 6 7 8 9 \n");
+    for(int i = 0; i < COLS; i++) {
+        printf("%c ", 'A' +i);
+        for(int j = 0; j < ROWS; j++) {
+            if(board[j][i] == 0)
+                printf(". ");
+            else if(board[j][i] == 1)
+                printf(". ");
+            else if(board[j][i] == 2)
+                printf(". ");
+            else if(board[j][i] == 3)
+                printf(". ");
+            else if(board[j][i] == 4)
+                printf(". ");
+            else if(board[j][i] == 31)
+            printf(". ");
+            else if(board[j][i] == 21)
+            printf(". ");
+            else if(board[j][i] == 22)
+                printf(". ");
+            else if(board[j][i] == 11)
+                printf(". ");
+            else if(board[j][i] == 12)
+                printf(". ");
+            else if(board[j][i] == 13)
+                printf(". ");
+            else if(board[j][i] == 45)
+                printf("- ");
+            else if(board[j][i] == 120)
+                printf("x ");
+            else if(board[j][i] == 88)
+                printf("X ");
+    }
+        printf("\n");
+    }
+}
+
+//Spielfeldausgabefunktion
+void Spielfeldeinleseausgabe(int board[ROWS][COLS]) {
     printf(" 0 1 2 3 4 5 6 7 8 9 \n");
     for(int i = 0; i < COLS; i++) {
         printf("%c ", 'A' +i);
@@ -222,9 +412,9 @@ void Spielfeldausgabe(int board[ROWS][COLS]) {
             else if(board[j][i] == 4)
                 printf("S ");
             else if(board[j][i] == 31)
-            printf("K ");
+                printf("K ");
             else if(board[j][i] == 21)
-            printf("Z ");
+                printf("Z ");
             else if(board[j][i] == 22)
                 printf("Z ");
             else if(board[j][i] == 11)
@@ -239,10 +429,16 @@ void Spielfeldausgabe(int board[ROWS][COLS]) {
                 printf("x ");
             else if(board[j][i] == 88)
                 printf("X ");
-    }
+        }
         printf("\n");
     }
 }
+
+
+
+
+
+
 
 void Schiffesetzen(int Koordinaten[], char Ausrichtung[], int board[ROWS][COLS], int Groesse[]){
 //Schlachtschiff
@@ -730,7 +926,14 @@ if(SchlachtschiffZaehler == 4){
 
 }
 
-
+void KonsoleLeeren() {
+    int input;
+    printf("1 eingeben um die Konsole zu leeren");
+    scanf("%d", &input);
+    if (input == 1) {
+        system("clear");
+    }
+}
 
 
 
@@ -745,7 +948,7 @@ int zaheler = 0;
         }
 
         if(zaheler == 20){
-printf(" Spieler 2 hat gegen Spieler 1 in einer vernichtenden Schlacht gewonnen");
+printf(" Alle Schiffe zerstört");
             exit(EXIT_SUCCESS);
 
 
@@ -764,9 +967,6 @@ printf(" Spieler 2 hat gegen Spieler 1 in einer vernichtenden Schlacht gewonnen"
 
 
 
-
-
-
 int main() {
 
    //Arrays, Variable, etc--------------------------------------------------------------
@@ -780,14 +980,18 @@ int main() {
     AusrichtungS1[7]='W';
     AusrichtungS1[8]='W';
     AusrichtungS1[9]='W';
-       /* //Koordinaten Spieler 2
+        //Koordinaten Spieler 2
         int KoordinatenS2[100];
         // char KoordinatenEinlesenS2[100];
         char AusrichtungS2[10];
+    AusrichtungS2[6] ='W';
+    AusrichtungS2[7]='W';
+    AusrichtungS2[8]='W';
+    AusrichtungS2[9]='W';
         char *ptrAusrichtungS2 = AusrichtungS2;
 //Variablen für die Kontrollfunktionen--------
 
-*/
+
 
 
 
@@ -795,23 +999,35 @@ int main() {
 
     KoordinatenEingabeS1(KoordinatenS1,ptrAusrichtungS1);
     Schiffesetzen(KoordinatenS1, AusrichtungS1, arr1,schiffgroessen);
-    Spielfeldausgabe(arr1);
+    Spielfeldeinleseausgabe(arr1);
+    KonsoleLeeren();
+
+    KoordinatenEingabeS2(KoordinatenS2,ptrAusrichtungS2);
+    Schiffesetzen(KoordinatenS2, AusrichtungS2, arr2,schiffgroessen);
+    Spielfeldeinleseausgabe(arr2);
+    KonsoleLeeren();
+
 
     while(Kontrollwert1 == 1 && Kontrollwert2 == 1){
+// Spieler 1 Spielzug
+        schiessen(arr2);
+    Spielfeldausgabe(arr2);
+    Kontrolle(KoordinatenS2,AusrichtungS2,arr2,schiffgroessen, Kontrollwert2);
+        Spielfeldausgabe(arr2);
+       Gesamtkontrolle(arr2,Kontrollwert2);
+// Spieler 2 Spielzug
 
         schiessen(arr1);
-    Spielfeldausgabe(arr1);
-    Kontrolle(KoordinatenS1,AusrichtungS1,arr1,schiffgroessen, Kontrollwert1);
-
         Spielfeldausgabe(arr1);
-       Gesamtkontrolle(arr1,Kontrollwert1);
+        Kontrolle(KoordinatenS1,AusrichtungS1,arr1,schiffgroessen, Kontrollwert1);
+        Spielfeldausgabe(arr1);
+        Gesamtkontrolle(arr1,Kontrollwert1);
 
-       printf("%d", Kontrollwert1);
 
 }
 
 
 
 
-
+return 0;
     }
