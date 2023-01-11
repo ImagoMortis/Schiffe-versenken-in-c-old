@@ -1034,8 +1034,22 @@ int main() {
 
 
 
+    printf("---------------------------------------------------------------------------------------\n");
+
+    printf("Schiffe versenken Kurzanleitung:\n");
+    printf("Es werden pro Spieler, 10 Schiffe gesetzt, diese werden je nach Wahl Senkrecht oder Waagerecht platziert.\n"
+           "Man waehlt zwischen Waage- oder Senkrecht indem man W (Grossbuchstabe) oder S (Grossbuchstabe) einliest.\n"
+           "Die Y-Koordiante wird ueber ein Buchstaben (Grossbuchstabe) A-J eingelesen.\n"
+           "Die X-Koordiante wird ueber eine Zahl 0-9 eingelesen.\n"
+           "Die Koordianten geben bei Waagerechter Ausrichtung den ersten Wert von link an, der Rest wird von dem Progamm eigenstaendig geaendert.\n"
+           "Spieler 1 beginnt.\n");
 
 
+
+
+
+
+    printf("---------------------------------------------------------------------------------------\n");
 
 
     KoordinatenEingabeS1(KoordinatenS1,ptrAusrichtungS1,AusrichtungS1);
