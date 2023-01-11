@@ -804,6 +804,9 @@ int main() {
 
         Spielfeldausgabe(arr1);
        // Gesamtkontrolle(arr1,Kontrollwert1);
+
+       printf("%d", Kontrollwert1);
+
 }
 
 
