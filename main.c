@@ -455,7 +455,7 @@ if(SchlachtschiffZaehler == 4){
             if (Kreuzerzähler1 == 3) {
                 for (int j = 0; j < Groesse[1]; j++) {
 
-                    board[Koordinaten[3] + i][Koordinaten[2]] = 88;
+                    board[Koordinaten[3] + j][Koordinaten[2]] = 88;
 
                 }
                 printf("Schiff versenkt\n");
@@ -471,7 +471,7 @@ if(SchlachtschiffZaehler == 4){
             if (Kreuzerzähler1 == 3) {
                 for (int j = 0; j < Groesse[1]; j++) {
 
-                    board[Koordinaten[3]][Koordinaten[2] + i] = 88;
+                    board[Koordinaten[3]][Koordinaten[2] + j] = 88;
 
                 }
                 printf("Schiff versenkt\n");
@@ -491,7 +491,7 @@ if(SchlachtschiffZaehler == 4){
                 if (Kreuzerzähler2 == 3) {
                     for (int j = 0; j < Groesse[1]; j++) {
 
-                        board[Koordinaten[5] + i][Koordinaten[4]] = 88;
+                        board[Koordinaten[5] + j][Koordinaten[4]] = 88;
 
                     }
                     printf("Schiff versenkt\n");
@@ -506,7 +506,7 @@ if(SchlachtschiffZaehler == 4){
                 if (Kreuzerzähler2 == 3) {
                     for (int j = 0; j < Groesse[1]; j++) {
 
-                        board[Koordinaten[5]][Koordinaten[4] + i] = 88;
+                        board[Koordinaten[5]][Koordinaten[4] + j] = 88;
 
                     }
                     printf("Schiff versenkt\n");
@@ -527,7 +527,7 @@ if(SchlachtschiffZaehler == 4){
                     if (zerstörerzähler1 == 2) {
                         for (int j = 0; j < Groesse[2]; j++) {
 
-                            board[Koordinaten[7] + i][Koordinaten[6]] = 88;
+                            board[Koordinaten[7] + j][Koordinaten[6]] = 88;
 
                         }
                         printf("Schiff versenkt\n");
@@ -542,7 +542,7 @@ if(SchlachtschiffZaehler == 4){
                     if (zerstörerzähler1 == 2) {
                         for (int j = 0; j < Groesse[2]; j++) {
 
-                            board[Koordinaten[7]][Koordinaten[6] + i] = 88;
+                            board[Koordinaten[7]][Koordinaten[6] + j] = 88;
 
                         }
                         printf("Schiff versenkt\n");
@@ -562,7 +562,7 @@ if(SchlachtschiffZaehler == 4){
                     if (zerstörerzähler2 == 2) {
                         for (int j = 0; j < Groesse[2]; j++) {
 
-                            board[Koordinaten[9] + i][Koordinaten[8]] = 88;
+                            board[Koordinaten[9] + j][Koordinaten[8]] = 88;
 
                         }
                         printf("Schiff versenkt\n");
@@ -577,7 +577,7 @@ if(SchlachtschiffZaehler == 4){
                     if (zerstörerzähler2 == 2) {
                         for (int j = 0; j < Groesse[2]; j++) {
 
-                            board[Koordinaten[9]][Koordinaten[8] + i] = 88;
+                            board[Koordinaten[9]][Koordinaten[8] + j] = 88;
 
                         }
                         printf("Schiff versenkt\n");
@@ -598,7 +598,7 @@ if(SchlachtschiffZaehler == 4){
                     if (zerstörerzähler3 == 2) {
                         for (int j = 0; j < Groesse[2]; j++) {
 
-                            board[Koordinaten[11] + i][Koordinaten[10]] = 88;
+                            board[Koordinaten[11] + j][Koordinaten[10]] = 88;
 
                         }
                         printf("Schiff versenkt\n");
@@ -613,7 +613,7 @@ if(SchlachtschiffZaehler == 4){
                     if (zerstörerzähler3 == 2) {
                         for (int j = 0; j < Groesse[2]; j++) {
 
-                            board[Koordinaten[11]][Koordinaten[10] + i] = 88;
+                            board[Koordinaten[11]][Koordinaten[10] + j] = 88;
 
                         }
                         printf("Schiff versenkt\n");
@@ -634,7 +634,7 @@ if(SchlachtschiffZaehler == 4){
             if (ubootzähler1 == 1) {
                 for (int j = 0; j < Groesse[2]; j++) {
 
-                    board[Koordinaten[13] + i][Koordinaten[12]] = 88;
+                    board[Koordinaten[13] + j][Koordinaten[12]] = 88;
 
                 }
                 printf("Schiff versenkt\n");
@@ -654,7 +654,7 @@ if(SchlachtschiffZaehler == 4){
             if (ubootzähler2 == 1) {
                 for (int j = 0; j < Groesse[3]; j++) {
 
-                    board[Koordinaten[15] + i][Koordinaten[14]] = 88;
+                    board[Koordinaten[15] + j][Koordinaten[14]] = 88;
 
                 }
                 printf("Schiff versenkt\n");
@@ -675,7 +675,7 @@ if(SchlachtschiffZaehler == 4){
             if (ubootzähler3 == 1) {
                 for (int j = 0; j < Groesse[3]; j++) {
 
-                    board[Koordinaten[17] + i][Koordinaten[16]] = 88;
+                    board[Koordinaten[17] + j][Koordinaten[16]] = 88;
 
                 }
                 printf("Schiff versenkt\n");
@@ -696,7 +696,7 @@ if(SchlachtschiffZaehler == 4){
             if (ubootzähler4 == 1) {
                 for (int j = 0; j < Groesse[3]; j++) {
 
-                    board[Koordinaten[19] + i][Koordinaten[18]] = 88;
+                    board[Koordinaten[19] + j][Koordinaten[18]] = 88;
 
                 }
                 printf("Schiff versenkt\n");
