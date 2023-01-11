@@ -32,30 +32,7 @@ int arr2[ROWS][COLS]={        //Spielfeld von Spieler 1 das Spieler2 sieht
         {0,0,0,0,0,0,0,0,0,0} //J
 };
 
-int arr3[ROWS][COLS]={   //Spielfeld von Spieler 2 das Spieler2 sieht
-        {0,0,0,0,0,0,0,0,0,0},//A
-        {0,0,0,0,0,0,0,0,0,0},//B
-        {0,0,0,0,0,0,0,0,0,0},//C
-        {0,0,0,0,0,0,0,0,0,0},//D
-        {0,0,0,0,0,0,0,0,0,0},//E
-        {0,0,0,0,0,0,0,0,0,0},//F
-        {0,0,0,0,0,0,0,0,0,0},//G
-        {0,0,0,0,0,0,0,0,0,0},//H
-        {0,0,0,0,0,0,0,0,0,0},//I
-        {0,0,0,0,0,0,0,0,0,0} //J
-};
 
-int arr4[ROWS][COLS]={        //Spielfeld von Spieler 2 das Spieler1 sieht
-        {0,0,0,0,0,0,0,0,0,0},//A
-        {0,0,0,0,0,0,0,0,0,0},//B
-        {0,0,0,0,0,0,0,0,0,0},//C
-        {0,0,0,0,0,0,0,0,0,0},//D
-        {0,0,0,0,0,0,0,0,0,0},//E
-        {0,0,0,0,0,0,0,0,0,0},//F
-        {0,0,0,0,0,0,0,0,0,0},//G
-        {0,0,0,0,0,0,0,0,0,0},//H
-        {0,0,0,0,0,0,0,0,0,0},//I
-        {0,0,0,0,0,0,0,0,0,0}}; //J
 
 int *KoordinatenEingabeS1(int KoordinatenS1[], char *ptrAusrichtungS1,char AusrichtungS1[]){
     //char KoordinatenEinlesenS1[39];
@@ -1023,7 +1000,6 @@ int main() {
     AusrichtungS1[9]='W';
         //Koordinaten Spieler 2
         int KoordinatenS2[100];
-        // char KoordinatenEinlesenS2[100];
         char AusrichtungS2[10];
     AusrichtungS2[6] ='W';
     AusrichtungS2[7]='W';
