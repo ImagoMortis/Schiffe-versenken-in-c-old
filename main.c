@@ -648,7 +648,7 @@ if(SchlachtschiffZaehler == 4){
             }
 //Überprüfung des Zählers
             if (ubootzähler1 == 1) {
-                for (int j = 0; j < Groesse[2]; j++) {
+                for (int j = 0; j < Groesse[3]; j++) {
 
                     board[Koordinaten[13] + j][Koordinaten[12]] = 88;
 
