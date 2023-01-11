@@ -1020,11 +1020,6 @@ int main() {
            "Die Koordianten geben bei Waagerechter Ausrichtung den ersten Wert von link an, der Rest wird von dem Progamm eigenstaendig geaendert.\n"
            "Spieler 1 beginnt.\n");
 
-
-
-
-
-
     printf("---------------------------------------------------------------------------------------\n");
 
 
@@ -1044,7 +1039,6 @@ int main() {
         // Spieler 1 Spielzug
         printf("Spieler eins ist am Zug\n");
         schiessen(arr2);
-        Spielfeldausgabe(arr2);
         Kontrolle(KoordinatenS2,AusrichtungS2,arr2,schiffgroessen, Kontrollwert2);
         Spielfeldausgabe(arr2);
          Gesamtkontrolle(arr2,Kontrollwert2);
@@ -1052,7 +1046,6 @@ int main() {
          // Spieler 2 Spielzug
         printf("Spieler zwei ist am Zug\n");
         schiessen(arr1);
-        Spielfeldausgabe(arr1);
         Kontrolle(KoordinatenS1,AusrichtungS1,arr1,schiffgroessen, Kontrollwert1);
         Spielfeldausgabe(arr1);
         Gesamtkontrolle(arr1,Kontrollwert1);
