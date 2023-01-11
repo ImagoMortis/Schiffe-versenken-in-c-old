@@ -1013,14 +1013,17 @@ int main() {
 
 
     while(Kontrollwert1 == 1 && Kontrollwert2 == 1){
-// Spieler 1 Spielzug
-        schiessen(arr2);
-    Spielfeldausgabe(arr2);
-    Kontrolle(KoordinatenS2,AusrichtungS2,arr2,schiffgroessen, Kontrollwert2);
-        Spielfeldausgabe(arr2);
-       Gesamtkontrolle(arr2,Kontrollwert2);
-// Spieler 2 Spielzug
 
+        // Spieler 1 Spielzug
+        printf("Spieler eins ist am Zug\n");
+        schiessen(arr2);
+        Spielfeldausgabe(arr2);
+        Kontrolle(KoordinatenS2,AusrichtungS2,arr2,schiffgroessen, Kontrollwert2);
+        Spielfeldausgabe(arr2);
+         Gesamtkontrolle(arr2,Kontrollwert2);
+
+         // Spieler 2 Spielzug
+        printf("Spieler zwei ist am Zug\n");
         schiessen(arr1);
         Spielfeldausgabe(arr1);
         Kontrolle(KoordinatenS1,AusrichtungS1,arr1,schiffgroessen, Kontrollwert1);
