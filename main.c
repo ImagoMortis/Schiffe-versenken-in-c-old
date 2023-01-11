@@ -591,7 +591,7 @@ void schiessen(int board[ROWS][COLS]){
 
         board[x][y] = 120;
 
-        printf("Schiff getroffen");
+        printf("Schiff getroffen\n");
     }
 
 
@@ -928,10 +928,14 @@ if(SchlachtschiffZaehler == 4){
 
 void KonsoleLeeren() {
     int input;
-    printf("1 eingeben um die Konsole zu leeren");
+    printf("1 eingeben um die Konsole zu leeren\n");
     scanf("%d", &input);
     if (input == 1) {
-        clrscr();
+
+        for (int i = 0; i < 50; ++i) {
+            printf(" \n");
+            fflush(stdin);
+                                    }
     }
 }
 
