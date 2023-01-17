@@ -581,21 +581,31 @@ board[Koordinaten[1]+i][Koordinaten[0]] = 4;
 void schiessen(int board[ROWS][COLS]){
     int x, y;
     char buchstabe;
+    int Kontrollwert = 1;
+    while(Kontrollwert == 1){
+        printf("Geben Sie eine Y-Koordinate ein:\n");
 
-    printf("Geben Sie eine Y-Koordinate ein:\n");
+        scanf("%c", &buchstabe);
+        fflush(stdin);
 
-    scanf("%c", &buchstabe);
-    fflush(stdin);
+        //Char zu integer casten
+        y = (int) buchstabe;
+        y = y - 65;
 
-    //Char zu integer casten
-    y = (int) buchstabe;
-    y = y - 65;
+        printf("Geben Sie eine X-Koordiante ein:\n");
+
+        scanf("%d", &x);
+        fflush(stdin);
 
 
-    printf("Geben Sie eine X-Koordiante ein:\n");
 
-    scanf("%d", &x);
-    fflush(stdin);
+        if(y >= 0 && y < 10 && x >= 0 && x < 10){
+
+            Kontrollwert = 0;
+
+        } else printf("Fehlerhafte Eingabe. Geben Sie die Koordinaten erneut ein \n");
+
+    }
 
     if(board[x][y] == 0){
 
